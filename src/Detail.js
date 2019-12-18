@@ -1,4 +1,16 @@
 import React, { Component } from "react";
-const Detail = () => "Detail";
+import { withRouter } from "react-router-dom";
+import { Query } from "react-apollo";
 
-export default Detail;
+const Detail = ({
+  match: {
+    params: { movieId }
+  }
+}) => {
+  console.log("====================================");
+  console.log(movieId);
+  console.log("====================================");
+  return <div>Detail</div>;
+};
+
+export default withRouter(Detail);
